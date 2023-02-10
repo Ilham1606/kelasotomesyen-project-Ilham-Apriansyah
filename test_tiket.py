@@ -44,5 +44,5 @@ def test_kereta(setup):
     time.sleep(1)
     setup.find_element(By.CSS_SELECTOR, '#formhome > div > div > div.train-form.z-index-999 > div.footer-part > button').click()
 
-    result = setup.find_element(By.XPATH, '//*[@id="app"]/div/div[2]/div[2]/div[3]/div/div/div[2]/div[1]/div[1]/div').text
-    assert result == 'Menampilkan semua kereta ke tujuanmu.'
+    result = setup.find_element(By.CLASS_NAME, 'text-section-title').text
+    assert result == 'Pilih Kereta Pergi'
